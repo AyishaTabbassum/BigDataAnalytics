@@ -78,10 +78,10 @@ RUN curl -SsfLO "http://archive-primary.cloudera.com/cdh5/cdh/5/hbase-0.98.6-cdh
 RUN tar -xvzf /usr/local/hbase/hbase-0.98.6-cdh5.3.0.tar.gz
 
 # Insert config file from local
-RUN mkdir /data/hbasedata
-ADD hbase-site.xml /data/hbasedata/
+#RUN mkdir /data/hbasedata
+#ADD hbase-site.xml /data/hbasedata/
 #RUN sed -i "s/hostnameValue/$hostnameValue/g" /data/hbasedata/hbase-site.xml
-RUN cp /data/hbasedata/* $HBASE_HOME/conf/
+#RUN cp /data/hbasedata/* $HBASE_HOME/conf/
 
 ## Install hive from cloudera
 WORKDIR /usr/local/hive
